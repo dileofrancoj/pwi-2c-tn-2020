@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Registro -->
+    <form method="post" action="#">
+      <label for="nombre_completo">Nombre completo *</label>
+      <input
+        name="nombre_completo"
+        type="text"
+        id="nombre_completo"
+        placeholder="Nombre Completo"
+        maxlength="10"
+        required
+      />
+      <br />
+      <input type="password" placeholder="************" />
+      <br />
+      <label for="correo">Mail</label>
+      <input
+        type="email"
+        id="correo"
+        name="correo"
+        placeholder="foo@example.com"
+        name="correo"
+        required
+      />
+      <br />
+      <label for="telefono">Tel</label>
+      <input value="1144739222" type="tel" name="telefono" id="telefono" />
+      <br />
+      <label for="nacionalidad">Nacionalidad *</label>
+      <select id="nacionalidad" name="nacionalidad">
+        <option selected disabled>Elegí tu país</option>
+        <option value="arg">Argentina</option>
+        <option value="bra"> Brasil</option>
+        <option value="uru">Uruguay</option>
+      </select>
+      <br />
+      <label for="sexo">Sexo * </label>
+      <input type="checkbox" id="sexo" name="sexo" /> Hombre
+      <input type="radio" id="sexo" name="sexo" />Mujer
+      <input type="radio" id="sexo" name="sexo" />Personalizado
+      <br />
+      <label for="fecha_nacimiento">Fecha de nacimiento</label>
+      <input type="date" />
+
+      <br />
+      <label for="imagen">Ingresá tu foto de perfil</label>
+      <input type="file" />
+      <br />
+      <label for="color">Cuál es tu color de ojos?</label>
+      <input type="color" />
+      <button>Registrate</button>
+      <!-- BUTTON -> submit -->
+    </form>
+    <button type="reset">Limpiar</button>
+    <button type="button">Boton inútil</button>
+    <!-- Contacto -->
+    <hr />
+    <h2>Contactame</h2>
+    <form method="post" action="#">
+      <label for="nombre">Nombre * </label>
+      <input type="text" required placeholder="Nombre completo" id="nombre" />
+      <br />
+      <label for="correo">Correo * </label>
+      <input
+        type="email"
+        required
+        placeholder="correo@ejemplo.com"
+        id="correo"
+      />
+      <br />
+      <label for="comentario">Comentario * </label>
+      <br />
+      <textarea required rows="10" cols="30">Comentario acá</textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
