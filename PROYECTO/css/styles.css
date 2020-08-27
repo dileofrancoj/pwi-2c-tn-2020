@@ -1,0 +1,53 @@
+* {
+  background: hotpink;
+}
+
+body {
+}
+
+h2 {
+  color: #1840a2;
+  background: #00ee33;
+  font-size: 28px;
+  text-align: right;
+  text-decoration: line-through;
+}
+
+h1,
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial;
+  color: #fe5000;
+  font-style: italic;
+}
+
+.color-tomato {
+  color: tomato;
+}
+
+.border {
+  border: dotted 3px black;
+  color: magenta;
+}
+h1 {
+  padding-top: 10px;
+  background: black;
+  font-size: 36px;
+  text-align: center;
+  text-decoration: underline;
+  border: solid red 2px;
+  border-radius: 4px;
+  height: 100px;
+}
+h3 {
+  color: deepskyblue;
+  text-decoration: overline;
+}
+p {
+  text-align: justify;
+  letter-spacing: normal;
+}
+
+.pt {
+  padding-top: 10px;
+}
+/* KISS , DRY   */
