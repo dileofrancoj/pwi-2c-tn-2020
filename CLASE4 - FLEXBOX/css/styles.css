@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  height: 50vh;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+}
+
+.banner:hover {
+  opacity: 0.9;
+}
+
+h1 {
+  color: ghostwhite;
+  text-align: center;
+}
+
+.row {
+  height: 400px;
+  background: violet;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#caja1 {
+  order: 1;
+  background: tomato;
+}
+
+#caja2 {
+  order: 1;
+}
+
+.col {
+  width: 30%;
+  border: 1px solid black;
+  color: white;
+  background: honeydew;
+}
+/* 
+    Formato resumido
+    padding : 30px top, right , bottom , left
+    padding : 20px 30px; top, bottom right left
+    padding : 5px 10px 15px 20px
+
+    margin : 20px 0
+    margin : 10px 0 50px 0
+
+    margin : auto
+*/
+
+.ejemplo {
+  background: tomato;
+  height: 200px;
+  border: 1px solid hotpink;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.ejemplo:hover {
+  background: lightblue;
+}
+
+.texto {
+  font-size: 26px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 62px;
+}
+
+.instagram {
+  color: yellow;
+}
+
+.linkedin {
+  color: burlywood;
+}
