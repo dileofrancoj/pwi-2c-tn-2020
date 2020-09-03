@@ -1,0 +1,27 @@
+/*NADA */
+
+.text-gabriel {
+  color: tomato;
+}
+
+.imagen {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition-duration: 2s;
+}
+
+.imagen:hover {
+  transform: scale(1.15) rotate(-10deg);
+  -webkit-transform: scale(1.15) rotate(-10deg);
+  -moz-transform: scale(1.15) rotate(-10deg);
+  -ms-transform: scale(1.15) rotate(-10deg);
+  -o-transform: scale(1.15) rotate(-10deg);
+  transition-duration: 2s;
+}
+
+.mt-p {
+  margin-top: 50px;
+}
