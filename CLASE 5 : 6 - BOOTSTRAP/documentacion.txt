@@ -1,2 +1,0 @@
-Bootstrap : https://getbootstrap.com/
-Book : https://bootstrapcreative.com/wp-bc/wp-content/uploads/2017/01/Sample-Bootstrap-4-Quick-Start.pdf
