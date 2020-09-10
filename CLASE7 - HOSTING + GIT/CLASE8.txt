@@ -1,0 +1,31 @@
+https://github.com/dileofrancoj/pwi-2c-tn-2020
+
+git bash
+git config --global user.name "franco di leo"
+git config --global user.email "dileo.francoj@gmail.com"
+
+
+ls -> lista (ver carpetas y archivos)
+dir -> directory (ver carpetas y archivos)
+cd -> change directory (cambiamos de carpetas)
+cls -> clear screen  -> limpiar pantalla
+clear -> limpiar pantalla
+ctrl + l --> limpiar pantalla
+
+git init 
+git status
+git add [archivo.extension] .
+git commit -m "Mensaje descriptivo del commit"
+git log // comando para ver commits
+git log --oneline
+git diff //cambios
+git checkout archivo.extension (deshacer cambios que estan trackeados pero que no tienen un commit asociado)
+git reset --hard/--soft [commit] (hard descarta cambios y soft guarda cambios (pendientes))
+git clone [repositorio]
+cd repositorio
+git pull 
+
+Tutorial como salir del vim 
+ESC
+:wq!
+:x!
