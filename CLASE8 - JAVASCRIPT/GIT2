@@ -1,0 +1,11 @@
+git add ./* --> all 
+git push origin master
+git clone 
+git pull 
+git remote -v
+git branch
+git checkout -b rama -> crea una rama y me posiciona en la rama creada
+git checkout [rama] -> nos mueve a la rama [rama]
+git merge [rama] -> fusiona la rama en la que estoy con la [rama]
+
+SIEMPRE desdpues de un merge se debe hacer un commit dejando constancia que se realizo una fusión controlada
