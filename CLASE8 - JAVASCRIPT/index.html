@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Hola soy HTML
+    <script>
+      const edadPermitida = 18;
+      document.write("Hola Mundo, soy Javascript :D");
+      console.log("Hola soy Javascript pero estoy en otro lugar 🤓");
+      // var [nombreVariable] = "valor"
+      // ESLint -> Extensión para vscode
+
+      // Concatenar
+      // console.log("Hola " + nombreCompleto + "edad : " + edad);
+      // TEMPLATE STRING :D
+      const nombreCompleto = prompt(
+        "Ingresá tu nombre HUMANO 🦮",
+        "Placeholder"
+      );
+      const edad = prompt("Ingresa tu edad HUMANO 🐶", "26"); // "26"
+      console.log(`Hola me llamo ${nombreCompleto} mi edad es : ${edad}`);
+
+      // Condicionales
+      /*
+      
+      if (edad > edadPermitida) {
+        console.log(`bienvenido : ${nombreCompleto} `);
+        // second stuff
+        ....
+      } else {
+        alert("🤖 Sal de acá borrego 🤖");
+      }
+      */
+
+      /*
+        if(edad>edadPermitida)
+            console.log("bienvenido :D")
+        else
+            console.log("Sal de ahi chivita chivita")
+      */
+
+      // Ternary operator : operadores ternarios
+      edad >= edadPermitida
+        ? console.log(`Bienvenido purrete ${nombreCompleto}`)
+        : console.log("Sal de ahi chivita chivita");
+      // 87
+
+      if (edad >= 18 && edad < 30) {
+        console.log("Tenes entre 18 y 30");
+      } else if (edad >= 30 && edad < 60) {
+        console.log("Tenes entre 30 y 59 años");
+      } else if (edad >= 60 && edad < 90) {
+        console.log("Tenes entre 60 y 90");
+      } else {
+        console.log("Menor de 18 y mayores o iguales a 90");
+      }
+
+      /*
+            Tipos de datos :
+            "Fernando" --> string o varchar : cadenas de texto
+            44 --> Entero : int
+            1.78 -> Flotante : float
+            casado : boolean : true / false
+            16/04/1976 -> Date : fechas
+            16/04/1976 16:00 -> Date Time : fechas y hora
+        */
+    </script>
+  </body>
+</html>
