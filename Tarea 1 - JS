@@ -1,0 +1,4 @@
+Tarea 1 : 
+    1. Presentarse con un JSON de al menos 3 niveles
+    2. Todos los subniveles pertenecientes a un array deben ser recorridos con un bucle for
+    3. los elementos (aunque se esté mal) deben tener etiquetas y estilos (la tarea debe ser legible :D)

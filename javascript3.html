@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Confeccionar un programa que le permita al docente cargar nombre del alumno y las 5 notas de sus pruebas de. calcular su promedio y mostrar en pantalla la nota mas alta y mas baja :D
+      var total = 0;
+      const notasAlumnos = [];
+      const nombreAlumo = prompt("Ingresa el nombre del alumno");
+
+      // Cuantas notas vas a cargar
+      for (let i = 0; i < 5; i++) {
+        /*
+          notasAlumnos[notasAlumnos.length] = parseInt(prompt(
+          `Ingresá la nota ${i + 1} del alumno`
+          ));
+
+          */
+        var notaParcial = parseInt(
+          prompt(`Ingresá la nota ${i + 1} del alumno`)
+        );
+        notasAlumnos.push(notaParcial);
+
+        total = total + notasAlumnos[i];
+      }
+      console.log(notasAlumnos);
+      console.log(total);
+
+      const notasTotales = notasAlumnos.length;
+      const promedio = total / notasTotales;
+      document.write(
+        `El alumno/a ${nombreAlumo} tuvo un promedio de : ${
+          total / notasTotales
+        }`
+      );
+
+      const max = Math.max(...notasAlumnos);
+      const min = Math.min(...notasAlumnos);
+      document.write(
+        `La nota mas alta de ${nombreAlumno} es : ${max} y la más baja fue : ${min} `
+      );
+
+      // ¿Aprobado?
+      promedio >= 6
+        ? document.write("aprobado 🤓")
+        : document.write("Desaprobado 🏄🏼‍♀️");
+    </script>
+  </body>
+</html>

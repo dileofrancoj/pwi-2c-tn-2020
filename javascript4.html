@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // JSON -> Javascript Object Notation propiedad : valor
+      const profe = {
+        nombre: "Franco",
+        apellido: "Di Leo",
+        apodo: "Frantuko🏓",
+        edad: 26,
+        casado: false,
+        nacimiento: "2020-03-29",
+        titulo: "Ingeniero Mecánico",
+        mascotas: [
+          { nombre: "Amazonas", tipo: "Perro", estado: true, raza: false },
+          { nombre: "Cruela", tipo: "perro", estado: false, raza: false },
+          {
+            nombre: "Squirtle",
+            tipo: "tortuga",
+            estado: false,
+            comidas: ["Lechuga", "Zanahoria"],
+          },
+        ],
+      };
+      for (var i = 0; i < profe.mascotas.length; i++) {
+        document.write(profe.mascotas[i].nombre);
+      }
+      document.write(
+        `<h1 style="color:tomato">${profe.nombre} ${profe.apellido}</h1>`
+      );
+      document.write(`Total de mascotas : ${profe.mascotas.length}<br>`);
+      document.write(`El nombre de mi perra es : ${profe.mascotas[0].nombre}`);
+      document.write(`${profe.mascotas[2].comidas[1]}`);
+      const alumnos = [
+        {
+          nombre: "Luis",
+          apodo: "Lucho",
+          edad: 26,
+          emoji: "🤓",
+          musica: [
+            { genero: "rock", puntuacion: 8 },
+            { genero: "electr´pnica", puntuacion: 7 },
+          ],
+          deporte: "Running",
+        },
+        {
+          nombre: "Pablo",
+          frase: "Si funciona no lo toques💣",
+          pets: ["Ulises", "Penelope"],
+        },
+      ];
+    </script>
+
+    <footer>
+      CopyRight by Frantuko
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </footer>
+  </body>
+</html>
