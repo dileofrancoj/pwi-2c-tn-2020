@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <!-- 
+        Función es un bloque de código que se ejecuta cuando es llamado
+        Reciclar el código
+
+        Funciónal
+        Orientados a objetos (Java, C#, Typescript)
+    -->
+    <script>
+      // ALMOHADOM
+      const nombre = pedirNombre();
+      const cantNotas = parseInt(
+        prompt("Cuantas notas queres cargarle a ", nombre)
+      );
+      const notas = cargarAlumnos(cantNotas);
+      const prom = promedio(notas);
+      const aprobado = estaAprobado(prom);
+      console.log(aprobado);
+    </script>
+  </body>
+</html>
