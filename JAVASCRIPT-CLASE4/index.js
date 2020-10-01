@@ -16,12 +16,10 @@ const despintar = () => {
   document.getElementById("message").innerText = "Elemento en blanco";
 };
 
-const pintarSeba = () => {
-  document.getElementById("recuadroSeba").style.background = "rebeccapurple";
+const colorear = (color) => {
+  document.getElementById("recuadroSeba").style.background = color;
 };
-const desPintarSeba = () => {
-  document.getElementById("recuadroSeba").style.background = "red";
-};
+
 const start = () => {
   // ACCESO AL ELEMENTO.ESCUCHAR("EVENTO",FUNCION)
   const usuarioElement = document.getElementById("usuario");
@@ -32,10 +30,10 @@ const start = () => {
     .addEventListener("dblclick", despintar);
   document
     .getElementById("recuadroSeba")
-    .addEventListener("mouseover", pintarSeba);
+    .addEventListener("mouseover", colorear("rebeccapurple"));
   document
     .getElementById("recuadroSeba")
-    .addEventListener("mouseout", desPintarSeba);
+    .addEventListener("mouseout", colorear("red"));
 };
 
 window.onload = start;
