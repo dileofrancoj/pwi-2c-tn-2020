@@ -6,6 +6,8 @@ function handlderInput(nombre) {
     : (element.style.border = `1px solid green`);
 }
 
+const getKeysStorage = () => Object.keys(localStorage);
+
 const send = () => {
   const obj = {
     nombre: document.getElementById("nombre").value,
@@ -14,6 +16,13 @@ const send = () => {
   };
   // sessionLocal , string
   localstorage.setItem(obj.email, JSON.stringify(obj));
+  const keys = getKeysStorage();
+  keys.map((usuario) => {
+    document.getElementById("users-list").innerHTML = `${localStorage.getItem(
+      usuario
+    )}`;
+  });
+
   //const string2Object = JSON.parse(obj);
 };
 
