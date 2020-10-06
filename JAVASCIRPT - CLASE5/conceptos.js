@@ -69,17 +69,17 @@ const getAsync = async (url = "https://rickandmortyapi.com/api/character/") => {
   // async await
   try {
     const response = await fetch(url);
-    const d = await response.json();
-    console.log("info async await", d);
+    const { results: characters } = await response.json();
+    console.log(characters);
   } catch (e) {
     console.error(e);
   }
 };
 
-data();
-comidas();
-merge();
-get();
+//data();
+//comidas();
+//merge();
+//get();
 getAsync();
 // Ciclo de vida -> onInit
 //window.onload = start;
