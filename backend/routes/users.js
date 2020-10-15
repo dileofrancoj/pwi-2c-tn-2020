@@ -37,7 +37,12 @@ const single = (req, res) => {
   res.render("user", { user });
 };
 
+const filter = (req, res) => {
+  // tarea -> console.log(req.query);
+};
+// query
 router.get("/list", list);
 router.get("/single/:id", single); // 1 2 pure
+router.get("/list/filter", filter);
 // router.get("/list/paginate/:start/:end", paginate);
 module.exports = router;
