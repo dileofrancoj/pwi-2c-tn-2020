@@ -8,6 +8,7 @@ const nodemailer = require("nodemailer");
         subject : 'Gracias por registrarte'
     }
 */
+// mail()
 const send = async ({ mail, subject = "Gracias por registrarte", message }) => {
   try {
     // HTTPS -> sacar verificacion en 2 pasos
