@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        {{#each cursos}}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/default.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{nombre}}</h5>
+                    <p class="card-text">{{nombreCategoria}}</p>
+                    <a href="/cursos/{{id}}" class="btn btn-primary btn-block">Ver más</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -8,7 +8,7 @@ dotenv.config();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const registro = require("./routes/registro");
-
+const cursos = require("./routes/cursos");
 var app = express();
 
 // view engine setup
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/registro", registro);
-
+app.use("/cursos", cursos);
 console.log("MAIL SERVICE : ", process.env.MAIL_SERVICE);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
