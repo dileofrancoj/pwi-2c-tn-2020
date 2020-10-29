@@ -10,6 +10,7 @@ var usersRouter = require("./routes/users");
 const registro = require("./routes/registro");
 const cursos = require("./routes/cursos");
 const categorias = require("./routes/categorias");
+const adminCursos = require("./routes/admin/cursos");
 var app = express();
 
 // view engine setup
@@ -27,6 +28,10 @@ app.use("/users", usersRouter);
 app.use("/registro", registro);
 app.use("/cursos", cursos);
 app.use("/categorias", categorias);
+
+// Administrador
+app.use("/admin/cursos", adminCursos);
+//app.use(/admin(istrador)?\cursos/, admin); // new Regexp('admin')
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

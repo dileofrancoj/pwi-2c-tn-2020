@@ -14,4 +14,10 @@ const single = async (id) => {
   return await pool.query(query, params);
 };
 
-module.exports = { get, single };
+const create = (obj) =>
+  pool
+    .query("INSERT INTO ?? SET ?", [T_CURSOS, obj])
+    .then((result) => result)
+    .catch((e) => e);
+
+module.exports = { get, single, create };

@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-4">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Alta de curso
+            </button>
+        </div>
+        <div class="col-12 mt-5">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre Curso</th>
+                        <th>Nombre categoria</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each cursos}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nombre}}</td>
+                        <td>{{nombreCategoria}}</td>
+                        <td><a href="/admin/cursos/delete/{{id}}"><i class="fas fa-pencil text-primary"></i></a></td>
+                        <td><a href="/admin/cursos/delete/{{id}}"><i class="fas fa-trash text-danger"></i></a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Nuevo Curso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/admin/cursos/create" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" required placeholder="Nombre curso" name="nombre" class="form-control">
+                    </div>
+                    <label for="categoria">Categoria *</label>
+                    <select name="idCategoria" required class="form-control">
+                        <option selected disabled>Selecciona categoria</option>
+                        {{#each categorias}}
+                        <option value={{id}}>{{nombre}}</option>
+                        {{/each}}
+
+                    </select>
+                    <button class="btn btn-primary btn-block">Guardar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
