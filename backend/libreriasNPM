@@ -1,0 +1,18 @@
+Por única vez
+
+    npm i express -g
+    npm i express-generator -g
+    npm i nodemon -g
+Modulos por proyecto:
+    npm i mysql // Consultas sql
+    npm i util // Hace async funciones
+    npm i sha1 // Crypt passwords / content
+    npm i uuid // Enlaces únicos de mail
+    npm i html2pdf // generacion pdfs
+    npm i express-session // crear variables de sesion login / carrito
+    npm i nodemailer // enviar correos
+    npm i dotenv // crear variables de entorno 
+    npm i jsonwebtoken // creacion de tokens
+    npm i @hapi/joi // middlewares
+    npm i mongodb // bases de datos no relacionales
+    npm i mongoose // bases de datos no relacionales con schemas
