@@ -13,6 +13,7 @@ Modulos por proyecto:
     npm i nodemailer // enviar correos
     npm i dotenv // crear variables de entorno 
     npm i jsonwebtoken // creacion de tokens
+    npm i multer
     npm i @hapi/joi // middlewares
     npm i mongodb // bases de datos no relacionales
     npm i mongoose // bases de datos no relacionales con schemas

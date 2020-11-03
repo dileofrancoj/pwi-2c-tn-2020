@@ -15,9 +15,12 @@ const saveFile = (
     const [type, extension] = mimetype.split("/");
     if (!allowE.includes(extension)) throw "Formato incorrecto";
     const uid = uuid(); // creando un id unico :D
+    const fileName = `${uid}.${extension}`;
     const fileNameOut = `${destFolder}/${uid}.${extension}`;
+
     fs.createReadStream(path).pipe(fs.createWriteStream(fileNameOut));
     deleteTemp(path);
+    return fileName;
   } catch (e) {
     deleteTemp(path);
     console.error(e);
