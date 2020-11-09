@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const dotenv = require("dotenv");
 dotenv.config();
+const session = require("express-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const registro = require("./routes/registro");
@@ -12,6 +13,8 @@ const cursos = require("./routes/cursos");
 const categorias = require("./routes/categorias");
 const adminCursos = require("./routes/admin/cursos");
 const docentes = require("./routes/admin/docentes");
+const login = require("./routes/login");
+
 var app = express();
 
 // view engine setup
@@ -23,12 +26,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
+// idUser : 3 // oamsd9am-sidnaosd12eads_
+// crea un objeto session dentro del request
+app.use(
+  session({
+    secret: process.env.SECRET_SESSION,
+    cookie: { maxAge: null },
+    resave: true,
+    saveUninitialized: false,
+  })
+);
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/registro", registro);
 app.use("/cursos", cursos);
 app.use("/categorias", categorias);
+app.use("/login", login);
 
 // Administrador
 app.use("/admin/cursos", adminCursos);

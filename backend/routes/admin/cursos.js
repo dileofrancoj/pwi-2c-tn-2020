@@ -4,6 +4,7 @@ const model = require("./../../models/cursos");
 const { get: getCategorias } = require("./../../models/categorias");
 const all = async (req, res) => {
   try {
+    console.log(req.session.idUser);
     const cursos = await model.get();
     const categorias = await getCategorias();
     res.render("admincursos", { cursos: cursos, categorias: categorias });
@@ -13,7 +14,6 @@ const all = async (req, res) => {
     //res.render('error')
   }
 };
-
 const create = async (req, res) =>
   model
     .create(req.body)
