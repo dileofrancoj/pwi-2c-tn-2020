@@ -4,7 +4,9 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const dotenv = require("dotenv");
+const { authAdmin } = require("./middlewares/auth");
 dotenv.config();
+
 const session = require("express-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -36,6 +38,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/registro", registro);
@@ -44,8 +47,9 @@ app.use("/categorias", categorias);
 app.use("/login", login);
 
 // Administrador
-app.use("/admin/cursos", adminCursos);
-app.use("/admin/docentes", docentes);
+
+app.use("/admin/cursos", authAdmin, adminCursos);
+app.use("/admin/docentes", authAdmin, docentes);
 //app.use(/admin(istrador)?\cursos/, admin); // new Regexp('admin')
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

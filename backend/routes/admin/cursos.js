@@ -4,7 +4,8 @@ const model = require("./../../models/cursos");
 const { get: getCategorias } = require("./../../models/categorias");
 const all = async (req, res) => {
   try {
-    console.log(req.session.idUser);
+    console.log(req.session.idUser); // by session
+    console.log(req.id); // by fran
     const cursos = await model.get();
     const categorias = await getCategorias();
     res.render("admincursos", { cursos: cursos, categorias: categorias });
