@@ -1,22 +1,17 @@
 const nodemailer = require("nodemailer");
-// mail -> asociada una demora
-// te enviamos un correo a tu cuenta de mail
 
-/*
-    obj = {
-        mail : 'clau@gmail.com',
-        subject : 'Gracias por registrarte'
-    }
-*/
-// mail()
-const send = async ({ mail, subject = "Gracias por registrarte", message }) => {
+const send = async ({
+  mail,
+  subject = "Gracias por registrarte",
+  message: html,
+}) => {
   try {
-    // HTTPS -> sacar verificacion en 2 pasos
-    // permitir a gmail acceso a aplicaciones poco seguras
+    //a href="" http://localhost:3000/registro/verify/uid
+
     const transporter = nodemailer.createTransport({
-      service: process.env.MAIL_SERVICE,
+      service: "gmail", // host, port
       auth: {
-        user: process.env.MAIL_USER,
+        user: "dileo.francoj@gmail.com",
         pass: process.env.MAIL_PASSWORD,
       },
       tls: {
@@ -25,8 +20,8 @@ const send = async ({ mail, subject = "Gracias por registrarte", message }) => {
     });
     const info = {
       to: mail,
-      subject: subject,
-      html: message,
+      subject,
+      html,
     };
     const { messageId } = await transporter.sendMail(info);
     return messageId;

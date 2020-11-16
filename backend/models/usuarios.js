@@ -15,4 +15,34 @@ const auth = ({ usuario, password }) =>
     .then((result) => result)
     .catch((e) => e);
 
-module.exports = { create, auth };
+// REGISTRO
+// update({habilitado : 1}, confirmacionCorreo = 'cc0cdb0e-3562-49b7-a48d-d0dc8bf7c780')
+
+// MODIFICAR LOS DATOS DESDE EL PANEL (id)
+// update({usuario, password}, id=1)
+
+// default : undefined
+const update = ({ uid, id, data }) =>
+  pool
+    .query("UPDATE ?? SET ? WHERE confirmacionCorreo = ? OR id = ?", [
+      T_USUARIOS,
+      obj,
+      uid,
+      id,
+    ])
+    .then((result) => result)
+    .catch((e) => e);
+/*
+
+const updateID = ({uid, id, data}) =>
+pool
+  .query("UPDATE ?? SET ? WHERE confirmacionCorreo = ? OR id = ?", [
+    T_USUARIOS,
+    obj,
+    uid,
+    id,
+  ])
+  .then((result) => result)
+  .catch((e) => e);
+*/
+module.exports = { create, auth, update };

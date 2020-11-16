@@ -12,6 +12,8 @@ const register = async ({
   password,
 } = {}) => {
   try {
+    // http://localhost:3000/registro/verify/uid
+    const uid = uid();
     const { insertId: idPersona } = await createPersona({
       nombre,
       apellido,
@@ -22,20 +24,19 @@ const register = async ({
       usuario,
       password: sha1(password),
       idPersona,
-      confirmacionCorreo: uid(),
+      confirmacionCorreo: uid, // enlace mágico
     });
-    return idUsuario;
-    /*
+    //return idUsuario;
+    // armar token
     const mailObject = {
-        mail,
-        message: `
+      mail,
+      message: `
           <h2>Gracias por registrarte ${nombre} ${apellido}</h2>
           <h3>No olvides verificar tu cuenta para seguir </h3>
-          <a href="">Enlace mágico </a>
+          <a href=${process.env.URL_SERVER}:${process.env.PORT}/registro/verify?uid=${uid}>Enlace mágico </a>
         `,
-      };
-      await send(mailObject);
-     */
+    };
+    await send(mailObject);
   } catch (e) {
     console.log(e);
   }
